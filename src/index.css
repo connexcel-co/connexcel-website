@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563EB;
+  --color-secondary: #0F172A;
+  --color-accent: #38BDF8;
+}
+
+/* Smooth scroll */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* =========================
+   Background Grid
+========================= */
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* =========================
+   Card Spotlight Hover
+========================= */
+
+.card-spotlight {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    600px circle at var(--x) var(--y),
+    rgba(56,189,248,0.15),
+    transparent 40%
+  );
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card-spotlight:hover::before {
+  opacity: 1;
+}
+
+/* =========================
+   Gradient Headline Text
+========================= */
+
+.gradient-text {
+background: linear-gradient(90deg, #38BDF8, #2563EB);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+color: transparent;
+}
+
+/* =========================
+Hero Glow Effect
+========================= */
+
+.hero-glow {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+
+  background: radial-gradient(
+    circle,
+    rgba(56,189,248,0.18) 0%,
+    rgba(37,99,235,0.12) 35%,
+    transparent 70%
+  );
+
+  filter: blur(80px);
+  opacity: 0.7;
+  pointer-events: none;
+
+  animation: heroGlow 8s ease-in-out infinite;
+}
+
+@keyframes heroGlow {
+
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+
+  50% {
+    transform: translateX(-50%) scale(1.15);
+  }
+
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+
+}
+
+/* =========================
+Scroll Cue Animation
+========================= */
+
+.scroll-cue-line {
+  animation: scrollPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0% {
+    opacity: 0.3;
+    transform: scaleY(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  100% {
+    opacity: 0.3;
+    transform: scaleY(0.8);
+  }
+}
+
+/* =========================
+Section Divider Glow
+========================= */
+
+.section-divider {
+  position: relative;
+  height: 120px;
+  pointer-events: none;
+}
+
+.section-divider::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 200px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(56, 189, 248, 0.12),
+    transparent 70%
+  );
+  filter: blur(40px);
+  opacity: 0.6;
+}
+
+/* =========================
+Terminal Cursor
+========================= */
+
+@keyframes cursorBlock {
+
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+.animate-cursorBlock {
+  animation: cursorBlock 1s infinite;
+}
+
+/* Premium input focus */
+
+input:focus,
+textarea:focus {
+
+box-shadow: 0 0 0 1px rgba(56,189,248,0.4),
+0 0 20px rgba(56,189,248,0.15);
+
+}
+

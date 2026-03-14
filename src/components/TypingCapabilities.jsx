@@ -52,7 +52,7 @@ export default function TypingCapabilities() {
     <span className="relative inline-flex items-center">
 
       {/* subtle glow */}
-      <span className="absolute inset-0 blur-xl bg-accent/20 rounded-sm"></span>
+      <span className="absolute inset-0 blur-xl bg-accent/2 rounded-sm"></span>
 
       {/* typing text */}
       <span className="relative gradient-text tracking-wider font-semibold text-sm sm:text-base md:text-lg">

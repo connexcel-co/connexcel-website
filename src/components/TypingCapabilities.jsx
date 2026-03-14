@@ -52,15 +52,15 @@ export default function TypingCapabilities() {
     <span className="relative inline-flex items-center">
 
       {/* subtle glow */}
-      <span className="absolute inset-0 blur-xl bg-accent/20 rounded-lg"></span>
+      <span className="absolute inset-0 blur-xl bg-accent/20 rounded-sm"></span>
 
       {/* typing text */}
-      <span className="relative gradient-text tracking-wider font-semibold">
+      <span className="relative gradient-text tracking-wider font-semibold text-sm sm:text-base md:text-lg">
         {text}
       </span>
 
       {/* terminal style cursor */}
-      <span className="ml-1 w-[10px] h-[1.1em] bg-accent animate-cursorBlock"></span>
+      <span className="ml-1 w-[8px] h-[1em] bg-accent animate-cursorBlock"></span>
 
     </span>
 

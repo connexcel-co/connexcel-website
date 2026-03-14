@@ -1,3 +1,4 @@
+
 import BackgroundOrbs from "./components/BackgroundOrbs"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
@@ -8,10 +9,9 @@ import WhyConnexcel from "./components/WhyConnexcel"
 import CTA from "./components/CTA"
 import Footer from "./components/Footer"
 
-
 function App() {
   return (
-    <div className="relative bg-secondary text-white font-sans">
+    <div className="relative min-h-screen overflow-x-hidden bg-secondary text-white font-sans">
 
       <BackgroundOrbs />
 
@@ -40,8 +40,6 @@ function App() {
       <CTA />
 
       <Footer />
-
-    
 
     </div>
   )

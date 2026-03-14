@@ -1,4 +1,3 @@
-
 import BackgroundOrbs from "./components/BackgroundOrbs"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
@@ -11,35 +10,43 @@ import Footer from "./components/Footer"
 
 function App() {
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-secondary text-white font-sans">
+    <div className="relative w-full min-h-screen overflow-x-hidden bg-secondary text-white font-sans">
 
-      <BackgroundOrbs />
+      {/* Background Effects */}
+      <div className="absolute inset-0 overflow-hidden">
+        <BackgroundOrbs />
+      </div>
 
-      <Navbar />
+      {/* Main Layout */}
+      <div className="relative flex flex-col w-full max-w-full">
 
-      <Hero />
+        <Navbar />
 
-      <div className="section-divider"></div>
+        <Hero />
 
-      <Problem />
+        <div className="section-divider"></div>
 
-      <div className="section-divider"></div>
+        <Problem />
 
-      <Services />
+        <div className="section-divider"></div>
 
-      <div className="section-divider"></div>
+        <Services />
 
-      <HowItWorks />
+        <div className="section-divider"></div>
 
-      <div className="section-divider"></div>
+        <HowItWorks />
 
-      <WhyConnexcel />
+        <div className="section-divider"></div>
 
-      <div className="section-divider"></div>
-      
-      <CTA />
+        <WhyConnexcel />
 
-      <Footer />
+        <div className="section-divider"></div>
+        
+        <CTA />
+
+        <Footer />
+
+      </div>
 
     </div>
   )

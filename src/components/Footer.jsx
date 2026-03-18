@@ -142,7 +142,20 @@ export default function Footer() {
             {/* Australian Badge */}
             <div className="flex items-center gap-3 text-gray-400 text-xs mt-6">
 
-              <span className="text-2xl">🇦🇺</span>
+              <svg
+  className="w-5 h-5 rounded-sm"
+  viewBox="0 0 36 36"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect width="36" height="36" fill="#00247d"/>
+  <rect width="18" height="18" fill="#012169"/>
+  <path d="M0 0 L18 18 M18 0 L0 18" stroke="#fff" strokeWidth="3"/>
+  <path d="M0 0 L18 18 M18 0 L0 18" stroke="#C8102E" strokeWidth="1.5"/>
+  <rect x="7" width="4" height="18" fill="#fff"/>
+  <rect y="7" width="18" height="4" fill="#fff"/>
+  <rect x="8" width="2" height="18" fill="#C8102E"/>
+  <rect y="8" width="18" height="2" fill="#C8102E"/>
+</svg>
 
               <span>
                 Australian Digital Systems Company

@@ -146,7 +146,7 @@ export default function Footer() {
               <img
               src={australiaFlag}
               alt="Australian flag"
-              className="w-7 h-7 object-cover rounded-sm"
+              className="w-6 h-6 object-cover rounded-sm"
             />
 
               <span>
